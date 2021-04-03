@@ -1,0 +1,513 @@
+/* ====================== */
+/* Basic setup */
+/* ====================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 1.6rem;
+}
+html
+{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+ul li{
+    list-style-type: none;
+}
+/* heading*/
+h1{
+    font-size:2.9rem;
+    color: #fff;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ====================== */
+/* Reusable Component */
+/* ====================== */
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+section{
+    padding: 8rem 0;
+}
+h2{
+    font-size:4rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
+    text-align: center;
+}
+h2:after{
+    content: '';
+    display: block;
+    height: .4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+h4{
+   font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+/*little-descriptions */
+.little-descriptions{
+    font-size: 1.6rem;
+    width:60%;
+    margin-left: 20%;
+    line-height: 3rem;
+    color: #000;
+    text-align: center;
+}
+/* button */
+
+.btn:link,
+.btn:visited,
+.btn
+{
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: .3rem solid #000;
+    text-transform: uppercase;
+    padding: 1.5rem 6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
+}
+/* ====================== */
+/* Header Section */
+/* ====================== */
+header{
+    background: linear-gradient(rgba(135, 80, 156, 0.9),rgba(135, 80, 156, 0.9)), url(bckimg/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+}
+
+.logo{
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+}
+/* main navigation */
+.main-nav{
+    float: right;
+    margin-top: 4rem;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(100, 58, 121,0);
+    padding: .6rem 1.6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: .5s;
+    
+}
+
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: rgb(100, 58, 121,1);
+}
+.active{
+    background: rgb(100, 58, 121,1);
+    border-radius: .3rem;
+}
+.hero-text-box{
+    width: 114rem;
+}
+/* sticky navigation */
+.sticky{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: rgb(135, 80, 156,0.9);
+    padding: 1rem 0;
+    box-shadow: 0 .2rem .5rem rgb(255, 255, 255,0.9);
+}
+.sticky .logo{
+    margin-top: 0;
+}
+.sticky .main-nav{
+    margin-top: .2rem;
+}
+.hero-text-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.btn-hero:link,
+.btn-hero:visited
+{
+    background: #eb7d4b;
+    border-color: #c86a40
+}
+/* ====================== */
+/* Services Section */
+/* ====================== */
+.services-section{
+    background: linear-gradient(rgb(23, 194, 164,0.9),rgba(23, 194, 164, 0.9)),url(bckimg/services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: #fff;
+}
+.services-section h2::after{
+    background: #14a58c;
+}
+.services-icon{
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+/* ====================== */
+/* Team Section */
+/* ====================== */
+.team-section{
+    background:linear-gradient(rgb(231, 241, 248,0.9),rgb(231, 241, 248,0.9)), url(bckimg/services-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top center;
+    background-attachment: fixed;
+    text-align: center;
+    
+}
+.team-section h2,
+.team-section p{
+    color:#3c4761; 
+}
+.team-section h2::after{
+    background: #c8d9e5;
+}
+.team-member{
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+.team-section h3{
+    color: #3c4761;
+}
+.role{
+    color: #30bae7;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-top: .7rem;
+    display: inline-block;
+}
+.team-section .box p{
+    color: #3c4761;
+}
+.social-link{
+    margin-top: 4.5rem;
+    
+}
+.social-link ul li{
+    display: inline-block;
+    margin:0 .5rem;
+}
+.social-link ul li a:link{
+    color: #fff;
+}
+.social-link ul li a:link i::before{
+   
+    background: #bdd1df;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .5s;
+    
+}
+.social-link ul li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+.social-link, .fa, .fab, .fas, .fal, .far{
+    color: #fff;
+}
+
+/* ====================== */
+/*  Skill Section */
+/* ====================== */
+.skill-section {
+    background:linear-gradient(rgb(255, 255, 255,0.9),rgb(255, 255, 255,0.9)), url(bckimg/skills.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #3c4761;
+    text-align: center;
+}
+.skill-section h2{
+     color: #3c4761;
+}
+.skill-section h2::after{
+    background: #dfe8ed;
+}
+.skill-section h3{
+   color: #3c4761; 
+}
+.skill-section .box{
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+    stroke-width: 5;
+}
+svg.radial-progress text{
+    fill:#3c4761;
+    font-size: 1.5rem;
+}
+svg.web-design circle{
+    stroke: #30bae7;
+}
+svg.html-css circle{
+    stroke: #d74680;
+}
+svg.graphic-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+/* ====================== */
+/*  Portfoli Section */
+/* ====================== */
+.portfoio-section{
+    background: linear-gradient(rgb(255, 221, 153,0.9),rgb(255, 221, 153,0.9)),url(bckimg/architecture-buildings-business-city-290595.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top center;
+    background-attachment: fixed;
+    text-align: center;
+    
+}
+.portfoio-section h2{
+    color: #393939;
+    
+}
+.portfoio-section h2::after{
+    background:#e5c37f; 
+}
+.portfolio-filter{
+    margin: 4.5rem 0;
+}
+.portfolio-filter button{
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: .5rem;
+    color: #393939;
+    text-transform: uppercase;
+    margin: 0 .5rem;
+    transition: 0.5s;
+}
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0.3rem .5rem rgb(57, 57, 57,0.5);
+    
+}
+.portfolio-image{
+    width: 100%;
+    height: 30rem;
+}
+.portfoio-section .col:nth-child(3){
+    margin-left: 0;
+}
+.portfoio-section .btn-load-more-projects{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+.portfoio-section .mixitup-control-active{
+    background: #fff;
+}
+/* ====================== */
+/*  About Section */
+/* ====================== */
+.about-section{
+    background: linear-gradient(rgb(229, 44, 118),rgb(215, 70, 128,0.9)),url(bckimg/apple-devices-books-business-coffee-572056.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center center;
+} 
+.about-section h2{
+    color: #fff;
+}
+.about-section h2::after{
+    background: #b73c6d;
+}
+.about-section .little-descriptions{
+    color: #fff;
+}
+.about-section .col:nth-child(3){
+    margin-left: 0;
+}
+.about-section .col:nth-child(1),
+.about-section .col:nth-child(2){
+    margin-top: 4rem;
+}
+.about-section .col:nth-child(3),
+.about-section .col:nth-child(4){
+    margin-top: 8rem;
+}
+.client-photp{
+    width: 10rem;
+    float: left;
+}
+.client-photp img{
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.client-review{
+    width:30rem;
+    float:left;
+}
+.client-review h3{
+    text-align: left;
+    color: #fff;
+}
+.client-review p{
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 20px;  
+    color: #fff;
+}
+.client-review .role{
+    color:#ffdd99;
+}
+/* ====================== */
+/*  Contact Section */
+/* ====================== */
+.contact-section{
+    background:linear-gradient(rgb(60, 84, 153,0.9),rgb(60, 84, 153,0.9)),url(bckimg/books-business-computer-connection-459654.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top center;
+    background-attachment: fixed;
+    text-align: center;
+}
+.contact-section h2::after{
+    background: #273a71;
+}
+.contact-section p
+{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.contact-section form{
+    margin-top: 5rem;
+    width: 70%;
+    margin-left: 15%;
+    
+}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea{
+    background: #273a71;
+    border: .1rem solid #273a71;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size:1.8rem;
+    margin: .5rem 0;
+}
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: .8;
+}
+.btn-submit{
+    background: #30bae7;
+    font-size: 1.8rem;
+    border: 0;
+    border-bottom: .3rem solid #299ec5;
+    border-radius: .5rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.btn-submit:hover{
+    cursor: pointer;
+    box-shadow: inset 0.3rem .5rem rgb(57, 57, 57,0.5);
+    
+}
+/* ====================== */
+/*  footer Section */
+/* ====================== */
+.footer-section {
+    
+    background: #344b8e;
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem soild rgba(225,225,225,0.3);  
+    
+}
+.footer-section li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+.footer-section li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+.footer-section li a:hover{
+    color: #30bae7;
+}
